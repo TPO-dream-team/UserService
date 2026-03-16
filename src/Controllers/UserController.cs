@@ -145,8 +145,8 @@ public class UserController : ControllerBase
 
         var claims = new[]
         {
-            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-            new Claim(ClaimTypes.Name, user.Username),
+            new Claim("Id", user.Id.ToString()),
+            new Claim("Username", user.Username),
             new Claim("Role", "user") 
         };
 
